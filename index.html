@@ -315,18 +315,34 @@
 							</ul>
 						</div>
 						<div class="image">
-							<img src="mig/planetväxel.JPG" alt="" />
+							<img src="mig/planetväxel.JPG" alt="" style="width: 100%; height: 100%; object-fit: contain; display: block; margin: auto;" />
+						</div>		
+					</section>
+
+					<section class="wrapper style1 align-center">
+						<button onclick="togglePDF('pdfContainer1')">Rapport: LCA stålkaross</button>
+						<div id="pdfContainer1" style="display: none; margin-top: 20px;">
+							<iframe src="rapporter/LCA_MI3.pdf" width="100%" height="800px"></iframe>
 						</div>
 					</section>
-					<button onclick="togglePDF()">Rapport: LCA stålkaross</button>
-
-					<div id="pdfContainer" style="display: none; margin-top: 20px;">
-						<iframe src="rapporter\LCA_MI3.pdf" width="100%" height="800px"></iframe>
-					</div>
-
+					
+					<section class="wrapper style1 align-center">
+						<button onclick="togglePDF('pdfContainer2')">Rapport: FEM-analyser</button>
+						<div id="pdfContainer2" style="display: none; margin-top: 20px;">
+							<iframe src="rapporter/Hållfasthet med FEM.pdf" width="100%" height="800px"></iframe>
+						</div>
+					</section>
+					
+					<section class="wrapper style1 align-center">
+						<button onclick="togglePDF('pdfContainer3')">Rapport: Kollaborativa robotar</button>
+						<div id="pdfContainer3" style="display: none; margin-top: 20px;">
+							<iframe src="rapporter/Kollaborativa robotar.pdf" width="100%" height="800px"></iframe>
+						</div>
+					</section>
+					
 					<script>
-					function togglePDF() {
-						var pdfContainer = document.getElementById("pdfContainer");
+					function togglePDF(containerId) {
+						var pdfContainer = document.getElementById(containerId);
 						if (pdfContainer.style.display === "none") {
 							pdfContainer.style.display = "block";
 						} else {
@@ -334,40 +350,7 @@
 						}
 					}
 					</script>
-
-					<button onclick="togglePDF()">Rapport: FEM-analyser</button>
-
-					<div id="pdfContainer" style="display: none; margin-top: 20px;">
-						<iframe src="rapporter\Hållfasthet med FEM.pdf" width="100%" height="800px"></iframe>
-					</div>
-
-					<script>
-					function togglePDF() {
-						var pdfContainer = document.getElementById("pdfContainer");
-						if (pdfContainer.style.display === "none") {
-							pdfContainer.style.display = "block";
-						} else {
-							pdfContainer.style.display = "none";
-						}
-					}
-					</script>
-
-					<button onclick="togglePDF()">Rapport: Kollaborativa robotar</button>
-
-					<div id="pdfContainer" style="display: none; margin-top: 20px;">
-						<iframe src="rapporter\LCA_MI3.pdf" width="100%" height="800px"></iframe>
-					</div>
-
-					<script>
-					function togglePDF() {
-						var pdfContainer = document.getElementById("pdfContainer");
-						if (pdfContainer.style.display === "none") {
-							pdfContainer.style.display = "block";
-						} else {
-							pdfContainer.style.display = "none";
-						}
-					}
-					</script>
+					
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
